@@ -20,3 +20,20 @@ I'm very interested in programming and web development.
 2. CSS
 3. Basics of vanilla JS
 4. Basics of UX/UI design
+
+## Code Example
+```
+function makeUpperCase(str) {
+    return str.toUpperCase();  
+}
+```
+
+## Experience
+*i have no cammercial experience yet*
+
+## Education
+* Web-designer course (SkillBox)
+* Project management course (Sibirix)
+
+## English
+pre-intermediate
