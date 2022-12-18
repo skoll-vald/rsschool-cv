@@ -38,6 +38,8 @@ address {
     font-style: normal;
 }
 
+
+
 /* Form */
 
 input, textarea, button, select {
@@ -156,7 +158,6 @@ h2 {
 	font-size: larger;
 	text-decoration: underline;
 	color: var(--primary);
-	transition: 0.2s ease-in-out;
 }
 
 .name {
