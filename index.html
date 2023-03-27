@@ -202,54 +202,54 @@
                 <div class="codexample inner-wrap" id="code">
                     <h2>Code Example</h2>
                     <code>
-                        // DOM Elements<Br>
-                        const button = document.querySelector('#random');<Br><Br>
+                        // DOM Elements<br>
+                        const button = document.querySelector('#random');<br><br>
                         
-                        // Generate random number<Br>
-                        const getRandomNumber = (low, high) => {<Br>
-                            const r = Math.floor(Math.random() * (high - low + 1)) + low;<Br>
-                            return r;<Br>
-                        }<Br><Br>
+                        // Generate random number<br>
+                        const getRandomNumber = (low, high) => {<br>
+                            const r = Math.floor(Math.random() * (high - low + 1)) + low;<br>
+                            return r;<br>
+                        }<br><br>
                         
-                        // Get random hsla value<Br>
-                        const getRandomColor = (h,s,l,a) => {<Br>
-                            var hue = getRandomNumber(h[0], h[1]);<Br>
-                            var saturation = getRandomNumber(s[0], s[1]);<Br>
-                            var lightness = getRandomNumber(l[0], l[1]);<Br>
-                            var alpha = getRandomNumber(a[0] * 100, a[1] * 100) / 100;<Br><Br>
+                        // Get random hsla value<br>
+                        const getRandomColor = (h,s,l,a) => {<br>
+                            var hue = getRandomNumber(h[0], h[1]);<br>
+                            var saturation = getRandomNumber(s[0], s[1]);<br>
+                            var lightness = getRandomNumber(l[0], l[1]);<br>
+                            var alpha = getRandomNumber(a[0] * 100, a[1] * 100) / 100;<br><br>
                             
-                            return {<Br>
-                                h: hue,<Br>
-                                s: saturation,<Br>
-                                l: lightness,<Br>
-                                a: alpha,<Br>
-                                hslaValue: getHSLAColor(hue, saturation, lightness, alpha)<Br>
-                            }<Br>
-                        }<Br><Br>
+                            return {<br>
+                                h: hue,<br>
+                                s: saturation,<br>
+                                l: lightness,<br>
+                                a: alpha,<br>
+                                hslaValue: getHSLAColor(hue, saturation, lightness, alpha)<br>
+                            }<br>
+                        }<br><br>
                         
-                        // format hsla value<Br>
-                        function getHSLAColor(h, s, l, a) {<Br>
-                            return `hsla(${h}, ${s}%, ${l}%, ${a})`;<Br>
-                        }<Br><Br>
+                        // format hsla value<br>
+                        function getHSLAColor(h, s, l, a) {<br>
+                            return `hsla(${h}, ${s}%, ${l}%, ${a})`;<br>
+                        }<br><br>
                         
-                        // ranges for each value in hsla<Br>
-                        const h_range = [0, 360];<Br>
-                        const s_range = [100, 100];<Br>
-                        const l_range = [40, 40];<Br>
-                        const a_range = [1, 1];<Br><Br>
+                        // ranges for each value in hsla<br>
+                        const h_range = [0, 360];<br>
+                        const s_range = [100, 100];<br>
+                        const l_range = [40, 40];<br>
+                        const a_range = [1, 1];<br><br>
                         
-                        // assign random hsla values and get complement<Br>
-                        const changeTheme = () => {<Br>
-                            const color = getRandomColor(h_range, s_range, l_range, a_range);<Br>
-                            const complement = getHSLAColor(color.h - 180, 120 - color.s, 60 - color.l, color.a);<Br>
-                            document.documentElement.style.setProperty('--subprimary', complement);<Br>
-                            document.documentElement.style.setProperty('--primary', color.hslaValue);<Br>
-                        }<Br><Br>
+                        // assign random hsla values and get complement<br>
+                        const changeTheme = () =&gt; {<br>
+                            const color = getRandomColor(h_range, s_range, l_range, a_range);<br>
+                            const complement = getHSLAColor(color.h - 180, 120 - color.s, 60 - color.l, color.a);<br>
+                            document.documentElement.style.setProperty('--subprimary', complement);<br>
+                            document.documentElement.style.setProperty('--primary', color.hslaValue);<br>
+                        }<br><br>
                         
-                        // assign to button click and onload<Br>
-                        button.addEventListener('click', () => {<Br>
-                            changeTheme();<Br>
-                        });<Br><Br>
+                        // assign to button click and onload<br>
+                        button.addEventListener('click', () =&gt; {<br>
+                            changeTheme();<br>
+                        });<br><br>
                         
                         changeTheme();
                     </code>
